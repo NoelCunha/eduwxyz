@@ -351,32 +351,17 @@ import React, { useState } from 'react';
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="w-full aspect-video border border-[#333] bg-black flex items-center justify-center relative group cursor-pointer overflow-hidden"
+                className="w-full aspect-video border border-[#333] bg-black relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-neon/0 group-hover:bg-neon/10 transition-colors z-10"></div>
-
-                <div className="absolute top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 flex justify-between text-[8px] sm:text-[10px] text-[#666] z-20">
-                  <span className="animate-pulse text-red-500">REC ●</span>
-                  <span>00:12:45:02</span>
-                </div>
-
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-white rounded-full flex items-center justify-center bg-black/50 backdrop-blur-sm"
-                  >
-                    <div className="w-0 h-0 border-t-[8px] sm:border-t-[10px] md:border-t-[12px] border-t-transparent border-l-[16px] sm:border-l-[20px] md:border-l-[24px] border-l-white border-b-[8px] sm:border-b-[10px] md:border-b-[12px] border-b-transparent ml-1 sm:ml-2"></div>
-                  </motion.div>
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#333]">
-                  <motion.div
-                    initial={{ width: "0%" }}
-                    whileInView={{ width: "33%" }}
-                    transition={{ duration: 1.5, delay: 0.5 }}
-                    className="h-full bg-red-600"
-                  ></motion.div>
-                </div>
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/ubSNwK2FMSQ?si=K4kay5lmVl2x2kyJ"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
               </motion.div>
             </div>
           </section>
